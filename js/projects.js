@@ -217,9 +217,11 @@
           </div>
   
           <div style="display: flex; justify-content: flex-end; gap: var(--space-3); flex-wrap: wrap;">
-            ${project.liveUrl && project.liveUrl.startsWith("http")
-              ? `<a href="${escapeAttribute(project.liveUrl)}" target="_blank" rel="noopener noreferrer" class="btn-primary">Yeni Sekmede Aç ↗</a>`
-              : `<a href="${escapeAttribute(project.liveUrl || "index.html")}" class="btn-primary">İlgili Sayfaya Git →</a>`
+            ${project.liveUrl && project.liveUrl.trim() !== ""
+  ? (project.liveUrl.startsWith("http")
+      ? `<a href="${escapeAttribute(project.liveUrl)}" target="_blank" rel="noopener noreferrer" class="btn-primary">Yeni Sekmede Aç ↗</a>`
+      : `<a href="${escapeAttribute(project.liveUrl)}" class="btn-primary">İlgili Sayfaya Git →</a>`)
+  : ""}
             }
           </div>
         </div>
