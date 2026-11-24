@@ -1,70 +1,56 @@
 [
-    {
-      "id": "ey-folio-template",
-      "title": "EY · Folio Modüler Portfolyo",
-      "category": "Web & UI",
-      "year": "2026",
-      "summary": "Geliştiriciler ve üreticiler için tasarım token'ları ve JSON veri yapısıyla kurgulanmış hafif portfolyo şablonu.",
-      "details": "Tek dosyaya sıkışmayan CSS değişken mimarisi, mobil uyumlu üst menü, JSON tabanlı proje listeleme ve çok sayfalı gezinme akışı sunar.",
-      "highlights": [
-        "tokens.css üzerinden tek noktadan renk ve tipografi yönetimi",
-        "data/projects.json ile kod bozmadan yeni proje ekleme",
-        "Harici framework gerektirmeyen hızlı yükleme"
-      ],
-      "tags": ["HTML5", "CSS Tokens", "JavaScript", "JSON"],
-      "liveUrl": "index.html",
-      "repoUrl": "https://github.com",
-      "featured": true
-    },
-    {
-      "id": "vehicle-stock-portal",
-      "title": "Araç Envanter Yönetim Paneli",
-      "category": "Full-Stack Web",
-      "year": "2026",
-      "summary": "Stok takibi, filtreleme ve kayıt düzenleme akışlarına sahip web tabanlı otomotiv envanter uygulaması.",
-      "details": "Araç kayıtlarının eklenmesi, güncellenmesi, durum filtrelemesi ve ilişkisel veritabanı tablolarıyla tutarlı şekilde yönetilmesi için kurgulanmış web uygulaması.",
-      "highlights": [
-        "CRUD işlemleri ve dinamik kayıt filtreleme",
-        "İlişkisel SQL tablo yapısı ve veri bütünlüğü",
-        "Yönetim ve listeleme ekranlarında sade kullanıcı akışı"
-      ],
-      "tags": ["PHP", "SQL", "HTML", "CSS"],
-      "liveUrl": "demo.html?id=vehicle-stock-portal",
-      "repoUrl": "https://github.com",
-      "featured": true
-    },
-    {
-      "id": "bash-server-guard",
-      "title": "Linux Sistem & Servis İzleme Scripti",
-      "category": "Linux & Otomasyon",
-      "year": "2026",
-      "summary": "Disk, bellek ve servis durumlarını kontrol edip düzenli rapor üreten modüler Bash otomasyon aracı.",
-      "details": "Sunucu veya yerel Linux ortamında kaynak kullanımını ve kritik servisleri kontrol ederek okunabilir durum çıktıları üreten komut satırı aracı.",
-      "highlights": [
-        "Disk, bellek ve servis sağlık kontrolleri",
-        "Tekrarlayan görevler için cron uyumlu çalışma yapısı",
-        "Temiz ve okunabilir log/rapor çıktısı"
-      ],
-      "tags": ["Linux", "Bash", "CLI"],
-      "liveUrl": "demo.html?id=bash-server-guard",
-      "repoUrl": "https://github.com",
-      "featured": true
-    },
-    {
-      "id": "sql-analytics-schema",
-      "title": "İlişkisel Veritabanı & Sorgu Seti",
-      "category": "Veritabanı",
-      "year": "2026",
-      "summary": "Normalize edilmiş tablo mimarisi, indeksleme ve raporlama sorgularından oluşan veritabanı çalışması.",
-      "details": "Gerçek senaryolara yönelik birincil/yabancı anahtar ilişkileri, çoklu birleştirme (JOIN) sorguları ve özet rapor görünümlerini içeren veritabanı tasarımı.",
-      "highlights": [
-        "Normalizasyon kurallarına uygun tablo ayrımı",
-        "Performans odaklı sorgu ve filtreleme kurgusu",
-        "Raporlama ve analiz için hazır SQL sorguları"
-      ],
-      "tags": ["SQL", "PL/SQL", "Schema Design"],
-      "liveUrl": "demo.html?id=sql-analytics-schema",
-      "repoUrl": "https://github.com",
-      "featured": false
-    }
-  ]
+  {
+    "id": "ey-folio",
+    "title": "EY · Folio — Kişisel Portfolyo & Referans Sistemi",
+    "category": "Web Arayüzü",
+    "year": "2026",
+    "featured": true,
+    "summary": "Web sitesi ve arayüz geliştirme projeleri için hazırlanan, JSON tabanlı içerik yönetimi ve doğrudan iletişim altyapısına sahip kişisel portfolyo sistemi.",
+    "problem": "Statik portfolyo sitelerinde yeni proje eklerken HTML kodlarına müdahale etme zorunluluğu ve yavaş yüklenen karmaşık şablonlar yerine sade, hızlı ve kolay yönetilebilir bir referans merkezi oluşturmak.",
+    "solution": "CSS değişkenleriyle modüler tasarım sistemi kuruldu, projeler harici JSON yapısına bağlandı ve sunucu gerektirmeyen Web3Forms API entegrasyonu ile doğrudan e-posta akışı sağlandı.",
+    "highlights": [
+      "HTML güncellemesi gerektirmeyen JSON tabanlı dinamik proje listeleme ve filtreleme",
+      "Mobil ve masaüstü cihazlara tam uyumlu, hızlı açılan minimalist arayüz mimarisi",
+      "API destekli iletişim formu ve tek tıkla e-posta kopyalama özelliği"
+    ],
+    "stack": ["HTML5", "CSS3", "JavaScript", "JSON", "Web3Forms API"],
+    "liveUrl": "https://efeylmz-bt.github.io/ey-folio/",
+    "repoUrl": "https://github.com/efeylmz-bt/ey-folio"
+  },
+  {
+    "id": "arac-envanter-sistemi",
+    "title": "Araç Envanter & Veritabanı Yönetim Paneli",
+    "category": "Web Uygulaması",
+    "year": "2026",
+    "featured": true,
+    "summary": "Araç kayıtlarının, teknik detayların ve envanter durumlarının merkezi bir veritabanı üzerinden takip edilmesini sağlayan web tabanlı yönetim paneli.",
+    "problem": "Dağınık halde tutulan araç özelliklerinin, bakım ve envanter kayıtlarının tek bir arayüzden hızlıca sorgulanamaması ve güncellenememesi.",
+    "solution": "İlişkisel SQL veritabanı şeması oluşturularak PHP tabanlı CRUD (ekleme, listeleme, güncelleme, silme) işlemleri sade bir yönetim arayüzüne bağlandı.",
+    "highlights": [
+      "İlişkisel SQL veritabanı ile yapılandırılmış araç ve kategori kayıt mimarisi",
+      "Hızlı kayıt ekleme, düzenleme ve filtreleme sunan kullanıcı dostu yönetim ekranları",
+      "Temiz form doğrulama ve düzenli veri tablosu görünümü"
+    ],
+    "stack": ["PHP", "SQL", "HTML5", "CSS3", "phpMyAdmin"],
+    "liveUrl": "",
+    "repoUrl": ""
+  },
+  {
+    "id": "kurumsal-web-arayuzu",
+    "title": "Kurumsal Tanıtım & Hizmet Arayüzü Mimarisi",
+    "category": "Web Arayüzü",
+    "year": "2026",
+    "featured": true,
+    "summary": "İşletmeler ve bireysel girişimler için hazırlanan, hizmet tanıtımı ve müşteri talebi toplamaya odaklı modern web sitesi arayüzü.",
+    "problem": "Ziyaretçilerin aradıkları hizmete ve iletişim kanallarına ulaşmakta zorlandığı karmaşık kurumsal siteler yerine net mesaj veren bir yapı kurgulamak.",
+    "solution": "Okunabilir tipografi, net bilgi hiyerarşisi ve yüksek dönüşüm odaklı iletişim çağrılarıyla responsive bir ön yüz mimarisi geliştirildi.",
+    "highlights": [
+      "Net tipografi ve yüksek kontrastlı, okunabilirlik odaklı sayfa düzeni",
+      "Tüm ekran boyutlarına uyumlu esnek ızgara (grid) ve bileşen yapısı",
+      "Hızlı açılış süresi ve sade kullanıcı deneyimi"
+    ],
+    "stack": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    "liveUrl": "",
+    "repoUrl": ""
+  }
+]
