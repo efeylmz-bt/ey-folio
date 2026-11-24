@@ -32,7 +32,7 @@
       "Temiz form doğrulama ve düzenli veri tablosu görünümü"
     ],
     "stack": ["PHP", "SQL", "HTML", "CSS"],
-    "liveUrl": "",,
+    "liveUrl": "",
     "repoUrl": "https://github.com/efeylmz-bt"
   },
   {
@@ -50,7 +50,7 @@
       "Düzenli log kaydı ve okunabilir terminal çıktısı"
     ],
     "stack": ["Linux", "Bash", "CLI"],
-    "liveUrl": "",,
+    "liveUrl": "",
     "repoUrl": "https://github.com/efeylmz-bt"
   }
 ]
