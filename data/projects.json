@@ -1,56 +1,56 @@
 [
   {
     "id": "ey-folio",
-    "title": "EY · Folio — Kişisel Portfolyo & Referans Sistemi",
-    "category": "Web Arayüzü",
+    "title": "EY · Folio Modüler Portfolyo",
+    "category": "Web & UI",
     "year": "2026",
     "featured": true,
-    "summary": "Web sitesi ve arayüz geliştirme projeleri için hazırlanan, JSON tabanlı içerik yönetimi ve doğrudan iletişim altyapısına sahip kişisel portfolyo sistemi.",
-    "problem": "Statik portfolyo sitelerinde yeni proje eklerken HTML kodlarına müdahale etme zorunluluğu ve yavaş yüklenen karmaşık şablonlar yerine sade, hızlı ve kolay yönetilebilir bir referans merkezi oluşturmak.",
-    "solution": "CSS değişkenleriyle modüler tasarım sistemi kuruldu, projeler harici JSON yapısına bağlandı ve sunucu gerektirmeyen Web3Forms API entegrasyonu ile doğrudan e-posta akışı sağlandı.",
+    "summary": "Geliştiriciler ve üreticiler için tasarım token'ları ve JSON veri yapısıyla kurgulanmış hafif portfolyo şablonu.",
+    "problem": "Statik portfolyo sitelerinde yeni proje eklerken HTML kodlarına müdahale etme zorunluluğu yerine sade ve JSON tabanlı bir yapı kurmak.",
+    "solution": "CSS değişkenleriyle modüler tasarım sistemi kuruldu, projeler harici JSON yapısına bağlandı ve Web3Forms API ile doğrudan e-posta akışı sağlandı.",
     "highlights": [
-      "HTML güncellemesi gerektirmeyen JSON tabanlı dinamik proje listeleme ve filtreleme",
-      "Mobil ve masaüstü cihazlara tam uyumlu, hızlı açılan minimalist arayüz mimarisi",
-      "API destekli iletişim formu ve tek tıkla e-posta kopyalama özelliği"
+      "JSON tabanlı dinamik proje listeleme ve filtreleme",
+      "Mobil ve masaüstü cihazlara tam uyumlu minimalist arayüz",
+      "API destekli iletişim formu entegrasyonu"
     ],
-    "stack": ["HTML5", "CSS3", "JavaScript", "JSON", "Web3Forms API"],
+    "stack": ["HTML5", "CSS Tokens", "JavaScript", "JSON"],
     "liveUrl": "https://efeylmz-bt.github.io/ey-folio/",
     "repoUrl": "https://github.com/efeylmz-bt/ey-folio"
   },
   {
-    "id": "arac-envanter-sistemi",
-    "title": "Araç Envanter & Veritabanı Yönetim Paneli",
-    "category": "Web Uygulaması",
+    "id": "arac-envanter",
+    "title": "Araç Envanter Yönetim Paneli",
+    "category": "Full-Stack Web",
     "year": "2026",
     "featured": true,
-    "summary": "Araç kayıtlarının, teknik detayların ve envanter durumlarının merkezi bir veritabanı üzerinden takip edilmesini sağlayan web tabanlı yönetim paneli.",
-    "problem": "Dağınık halde tutulan araç özelliklerinin, bakım ve envanter kayıtlarının tek bir arayüzden hızlıca sorgulanamaması ve güncellenememesi.",
-    "solution": "İlişkisel SQL veritabanı şeması oluşturularak PHP tabanlı CRUD (ekleme, listeleme, güncelleme, silme) işlemleri sade bir yönetim arayüzüne bağlandı.",
+    "summary": "Stok takibi, filtreleme ve kayıt düzenleme akışlarına sahip web tabanlı otomotiv envanter uygulaması.",
+    "problem": "Araç kayıtlarının ve bakım/envanter bilgilerinin tek bir arayüzden hızlıca sorgulanamaması.",
+    "solution": "İlişkisel SQL veritabanı ile PHP tabanlı CRUD işlemleri sade bir yönetim arayüzüne bağlandı.",
     "highlights": [
-      "İlişkisel SQL veritabanı ile yapılandırılmış araç ve kategori kayıt mimarisi",
-      "Hızlı kayıt ekleme, düzenleme ve filtreleme sunan kullanıcı dostu yönetim ekranları",
+      "İlişkisel SQL veritabanı ile yapılandırılmış araç kayıt mimarisi",
+      "Hızlı kayıt ekleme, düzenleme ve filtreleme ekranları",
       "Temiz form doğrulama ve düzenli veri tablosu görünümü"
     ],
-    "stack": ["PHP", "SQL", "HTML5", "CSS3", "phpMyAdmin"],
-    "liveUrl": "",
-    "repoUrl": ""
+    "stack": ["PHP", "SQL", "HTML", "CSS"],
+    "liveUrl": "demo.html?id=arac-envanter",
+    "repoUrl": "https://github.com/efeylmz-bt"
   },
   {
-    "id": "kurumsal-web-arayuzu",
-    "title": "Kurumsal Tanıtım & Hizmet Arayüzü Mimarisi",
-    "category": "Web Arayüzü",
+    "id": "linux-izleme",
+    "title": "Linux Sistem & Servis İzleme Scripti",
+    "category": "Linux & Otomasyon",
     "year": "2026",
     "featured": true,
-    "summary": "İşletmeler ve bireysel girişimler için hazırlanan, hizmet tanıtımı ve müşteri talebi toplamaya odaklı modern web sitesi arayüzü.",
-    "problem": "Ziyaretçilerin aradıkları hizmete ve iletişim kanallarına ulaşmakta zorlandığı karmaşık kurumsal siteler yerine net mesaj veren bir yapı kurgulamak.",
-    "solution": "Okunabilir tipografi, net bilgi hiyerarşisi ve yüksek dönüşüm odaklı iletişim çağrılarıyla responsive bir ön yüz mimarisi geliştirildi.",
+    "summary": "Disk, bellek ve servis durumlarını kontrol edip düzenli rapor üreten modüler Bash otomasyon aracı.",
+    "problem": "Sunucu ve yerel Linux ortamlarında kaynak tüketiminin manuel komutlarla takip edilmesinin zaman alması.",
+    "solution": "Eşik değer aşımlarında uyarı veren ve özet rapor üreten modüler Bash scripti geliştirildi.",
     "highlights": [
-      "Net tipografi ve yüksek kontrastlı, okunabilirlik odaklı sayfa düzeni",
-      "Tüm ekran boyutlarına uyumlu esnek ızgara (grid) ve bileşen yapısı",
-      "Hızlı açılış süresi ve sade kullanıcı deneyimi"
+      "CPU, RAM ve disk kullanımını tek komutta özetleyen modüler yapı",
+      "Kritik servislerin çalışma durumunu otomatik denetleme",
+      "Düzenli log kaydı ve okunabilir terminal çıktısı"
     ],
-    "stack": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-    "liveUrl": "",
-    "repoUrl": ""
+    "stack": ["Linux", "Bash", "CLI"],
+    "liveUrl": "demo.html?id=linux-izleme",
+    "repoUrl": "https://github.com/efeylmz-bt"
   }
 ]
