@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İletişim — Efe Yılmaz | EY · Folio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-dot"></span>
+        <span>EY · Folio</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" data-nav-toggle>
+        Menü
+      </button>
+
+      <nav class="nav-links" data-nav-links>
+        <a href="index.html" class="nav-link">Ana Sayfa</a>
+        <a href="projects.html" class="nav-link">Projeler</a>
+        <a href="about.html" class="nav-link">Hakkımda</a>
+        <a href="contact.html" class="nav-link">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h1 style="font-size: var(--text-3xl);">İletişim &amp; Proje Talebi</h1>
+            <p class="section-subtitle">Gönderdiğin mesaj doğrudan e-posta kutuma düşer.</p>
+          </div>
+        </div>
+
+        <div class="two-col-grid">
+          <form class="panel-card form-stack" id="contact-form">
+            <input type="hidden" name="access_key" value="162d6c93-af67-4111-99e9-b7c59e50f956" />
+            <input type="hidden" name="from_name" value="EY · Folio İletişim" />
+
+            <div class="form-group">
+              <label class="form-label" for="sender-name">Ad Soyad</label>
+              <input class="form-input" id="sender-name" name="name" type="text" placeholder="Adın Soyadın" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="sender-email">E-posta Adresin</label>
+              <input class="form-input" id="sender-email" name="email" type="email" placeholder="ornek@mail.com" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="sender-message">Mesajın</label>
+              <textarea class="form-textarea" id="sender-message" name="message" rows="5" placeholder="Proje kapsamı, iş birliği veya mesajın..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" id="submit-btn">Mesajı Gönder</button>
+            <div class="status-banner" id="form-status"></div>
+          </form>
+
+          <div class="panel-card" style="display: flex; flex-direction: column; justify-content: space-between; gap: var(--space-6);">
+            <div>
+              <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">Doğrudan İletişim</h2>
+              <p class="project-summary" style="margin-bottom: var(--space-6);">
+                E-posta adresimi tek tıkla kopyalayabilir veya sol taraftaki form üzerinden doğrudan mesaj bırakabilirsin.
+              </p>
+
+              <div class="timeline-date">E-POSTA ADRESİM</div>
+              <p style="font-weight: 600; margin-bottom: var(--space-4);" id="owner-email">efey9900@gmail.com</p>
+
+              <button type="button" class="btn-secondary" id="copy-email-btn">E-posta Adresini Kopyala</button>
+            </div>
+
+            <div style="padding-top: var(--space-4); border-top: 1px solid var(--color-border); font-size: var(--text-sm); color: var(--color-text-muted);">
+              Efe Yılmaz · Bilişim Sistemleri ve Teknolojileri
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Efe Yılmaz · EY · Folio. Tüm hakları saklıdır.</span>
+      <span>HTML · CSS · JavaScript · JSON</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("form-status");
+      const submitBtn = document.getElementById("submit-btn");
+      const copyBtn = document.getElementById("copy-email-btn");
+      const ownerEmail = document.getElementById("owner-email").textContent.trim();
+
+      if (copyBtn) {
+        copyBtn.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(ownerEmail);
+            copyBtn.textContent = "Kopyalandı ✓";
+          } catch {
+            copyBtn.textContent = "Kopyalanamadı";
+          }
+          setTimeout(() => {
+            copyBtn.textContent = "E-posta Adresini Kopyala";
+          }, 2000);
+        });
+      }
+
+      if (form) {
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const formData = new FormData(form);
+          const senderName = (formData.get("name") || "Ziyaretçi").toString().trim();
+          const now = new Date().toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+          formData.append("subject", `EY · Folio Mesaj — ${senderName} (${now})`);
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Gönderiliyor...";
+          status.classList.remove("is-visible");
+
+          try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+              status.textContent = "Mesajın başarıyla gönderildi! En kısa sürede dönüş yapacağım.";
+              status.classList.add("is-visible");
+              form.reset();
+            } else {
+              throw new Error(result.message || "Gönderim başarısız oldu.");
+            }
+          } catch (err) {
+            status.textContent = "Mesaj gönderilemedi. Lütfen doğrudan e-posta adresini kopyalayarak iletişime geç.";
+            status.classList.add("is-visible");
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Mesajı Gönder";
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

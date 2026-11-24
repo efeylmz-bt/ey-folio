@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeler — EY · Folio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-dot"></span>
+        <span>EY · Folio</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" data-nav-toggle>
+        Menü
+      </button>
+
+      <nav class="nav-links" data-nav-links>
+        <a href="index.html" class="nav-link">Ana Sayfa</a>
+        <a href="projects.html" class="nav-link">Projeler</a>
+        <a href="about.html" class="nav-link">Hakkımda</a>
+        <a href="contact.html" class="nav-link">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h1 style="font-size: var(--text-3xl);">Tüm Projeler</h1>
+            <p class="section-subtitle">Kayıtlı projeler <code>data/projects.json</code> üzerinden dinamik listelenir.</p>
+          </div>
+        </div>
+
+        <div id="all-projects" data-projects-container></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 EY · Folio. Tüm hakları saklıdır.</span>
+      <span>HTML · CSS · JavaScript · JSON</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>

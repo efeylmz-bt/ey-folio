@@ -1,0 +1,70 @@
+[
+    {
+      "id": "ey-folio-template",
+      "title": "EY · Folio Modüler Portfolyo",
+      "category": "Web & UI",
+      "year": "2026",
+      "summary": "Geliştiriciler ve üreticiler için tasarım token'ları ve JSON veri yapısıyla kurgulanmış hafif portfolyo şablonu.",
+      "details": "Tek dosyaya sıkışmayan CSS değişken mimarisi, mobil uyumlu üst menü, JSON tabanlı proje listeleme ve çok sayfalı gezinme akışı sunar.",
+      "highlights": [
+        "tokens.css üzerinden tek noktadan renk ve tipografi yönetimi",
+        "data/projects.json ile kod bozmadan yeni proje ekleme",
+        "Harici framework gerektirmeyen hızlı yükleme"
+      ],
+      "tags": ["HTML5", "CSS Tokens", "JavaScript", "JSON"],
+      "liveUrl": "index.html",
+      "repoUrl": "https://github.com",
+      "featured": true
+    },
+    {
+      "id": "vehicle-stock-portal",
+      "title": "Araç Envanter Yönetim Paneli",
+      "category": "Full-Stack Web",
+      "year": "2026",
+      "summary": "Stok takibi, filtreleme ve kayıt düzenleme akışlarına sahip web tabanlı otomotiv envanter uygulaması.",
+      "details": "Araç kayıtlarının eklenmesi, güncellenmesi, durum filtrelemesi ve ilişkisel veritabanı tablolarıyla tutarlı şekilde yönetilmesi için kurgulanmış web uygulaması.",
+      "highlights": [
+        "CRUD işlemleri ve dinamik kayıt filtreleme",
+        "İlişkisel SQL tablo yapısı ve veri bütünlüğü",
+        "Yönetim ve listeleme ekranlarında sade kullanıcı akışı"
+      ],
+      "tags": ["PHP", "SQL", "HTML", "CSS"],
+      "liveUrl": "demo.html?id=vehicle-stock-portal",
+      "repoUrl": "https://github.com",
+      "featured": true
+    },
+    {
+      "id": "bash-server-guard",
+      "title": "Linux Sistem & Servis İzleme Scripti",
+      "category": "Linux & Otomasyon",
+      "year": "2026",
+      "summary": "Disk, bellek ve servis durumlarını kontrol edip düzenli rapor üreten modüler Bash otomasyon aracı.",
+      "details": "Sunucu veya yerel Linux ortamında kaynak kullanımını ve kritik servisleri kontrol ederek okunabilir durum çıktıları üreten komut satırı aracı.",
+      "highlights": [
+        "Disk, bellek ve servis sağlık kontrolleri",
+        "Tekrarlayan görevler için cron uyumlu çalışma yapısı",
+        "Temiz ve okunabilir log/rapor çıktısı"
+      ],
+      "tags": ["Linux", "Bash", "CLI"],
+      "liveUrl": "demo.html?id=bash-server-guard",
+      "repoUrl": "https://github.com",
+      "featured": true
+    },
+    {
+      "id": "sql-analytics-schema",
+      "title": "İlişkisel Veritabanı & Sorgu Seti",
+      "category": "Veritabanı",
+      "year": "2026",
+      "summary": "Normalize edilmiş tablo mimarisi, indeksleme ve raporlama sorgularından oluşan veritabanı çalışması.",
+      "details": "Gerçek senaryolara yönelik birincil/yabancı anahtar ilişkileri, çoklu birleştirme (JOIN) sorguları ve özet rapor görünümlerini içeren veritabanı tasarımı.",
+      "highlights": [
+        "Normalizasyon kurallarına uygun tablo ayrımı",
+        "Performans odaklı sorgu ve filtreleme kurgusu",
+        "Raporlama ve analiz için hazır SQL sorguları"
+      ],
+      "tags": ["SQL", "PL/SQL", "Schema Design"],
+      "liveUrl": "demo.html?id=sql-analytics-schema",
+      "repoUrl": "https://github.com",
+      "featured": false
+    }
+  ]
